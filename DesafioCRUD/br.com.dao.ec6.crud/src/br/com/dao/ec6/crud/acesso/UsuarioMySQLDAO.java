@@ -24,6 +24,7 @@ public class UsuarioMySQLDAO <E extends Entidade> extends MySQLDAO {
         setTabela("tbUsuario");
     }
 
+    //atribui os campos de login e senha de uma tabela em um usuário
     @Override
     protected E preencheEntidade(ResultSet rs) {
         Usuario entidade = new Usuario();
@@ -41,5 +42,11 @@ public class UsuarioMySQLDAO <E extends Entidade> extends MySQLDAO {
     public Entidade seleciona(int id) {
         // Não há retorno por id
         return null;
+    }
+
+    //retorna o select para localizar um login
+    @Override
+    protected String getLocalizaCommand(){
+        return "select * from tbUsuario where Login = ?";
     }
 }

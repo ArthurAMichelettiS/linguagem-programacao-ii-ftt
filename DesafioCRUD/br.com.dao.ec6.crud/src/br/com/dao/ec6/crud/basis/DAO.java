@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 public abstract class DAO <E extends Entidade> {
     
+    //DAO genérico para ser acessado pelo business com funções de localizar e listar do banco
+    
     protected Class<E> entityClass;
 
     public DAO(Class<E> entityClass){
