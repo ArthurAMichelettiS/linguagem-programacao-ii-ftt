@@ -18,9 +18,9 @@ public enum EnumEstadoConsole {
     MENU_PRINCIPAL (new EstadoConsoleMenuPrincipal()),
     
     EXIBIR_BOA_NOITE (new EstadoConsoleExibirBoaNoite());
- 
+
     private final MaquinaEstadoConsole estadoMaquina;
-    
+
     EnumEstadoConsole(MaquinaEstadoConsole estadoMaquina) {
         this.estadoMaquina = estadoMaquina;
     }
